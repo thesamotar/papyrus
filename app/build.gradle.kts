@@ -61,6 +61,18 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:1.5.3")
     implementation("androidx.compose.ui:ui-text-google-fonts:1.5.0")
     implementation("androidx.compose.material3:material3:1.2.0")
+
+    //retrofit for API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Coil for image loading
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    // Coroutines (if not included already)
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

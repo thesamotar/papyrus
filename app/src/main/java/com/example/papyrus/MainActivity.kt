@@ -27,6 +27,7 @@ import com.example.papyrus.ui.theme.PapyrusTheme
 
 // importing UI components
 import com.example.papyrus.ui.components.SearchTopBar
+import com.example.papyrus.ui.search.SearchViewModel
 
 class MainActivity : ComponentActivity() {
     // This is the entry point for your app - like "main" in other languages
@@ -60,6 +61,7 @@ val navigationItems = listOf(
     NavItem.Profile
 )
 
+
 @OptIn(ExperimentalMaterial3Api::class) // Required for TopAppBar API (safe to use, just alerts you it's new)
 @Composable
 fun PapyrusApp() {
@@ -72,6 +74,7 @@ fun PapyrusApp() {
     // This variable stores which tab you are on (0 = Home, 1 = Library, etc.)
     var selectedTab by remember { mutableIntStateOf(0) }
     // "remember" makes Compose keep the value until you switch tabs
+    val searchViewModel = remember { SearchViewModel() }
 
     // Scaffold provides Material3 "structure": top app bar, bottom nav bar, and main content in the middle
     Scaffold(
@@ -105,7 +108,8 @@ fun PapyrusApp() {
             SearchScreen(
                 query = searchText,
                 onQueryChange = { searchText = it },
-                onSearchExit = { searchActive = false }
+                onSearchExit = { searchActive = false; searchText = " " },
+                viewModel = searchViewModel
             )
         } else {
             // Show a different screen depending on which tab is selected (like switching pages)
