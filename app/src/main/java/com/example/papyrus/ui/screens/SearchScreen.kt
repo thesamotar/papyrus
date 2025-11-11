@@ -12,7 +12,7 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import com.example.papyrus.data.BookItem
+import com.example.papyrus.data.GoogleBooksSearch.BookItem
 import com.example.papyrus.ui.search.SearchViewModel
 
 @Composable

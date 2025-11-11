@@ -1,4 +1,4 @@
-package com.example.papyrus.data
+package com.example.papyrus.data.GoogleBooksSearch
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

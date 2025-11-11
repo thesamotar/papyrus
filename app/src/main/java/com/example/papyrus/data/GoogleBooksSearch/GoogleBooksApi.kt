@@ -1,4 +1,4 @@
-package com.example.papyrus.data
+package com.example.papyrus.data.GoogleBooksSearch
 
 import retrofit2.http.GET
 import retrofit2.http.Query

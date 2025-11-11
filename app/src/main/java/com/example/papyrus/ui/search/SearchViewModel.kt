@@ -2,8 +2,8 @@ package com.example.papyrus.ui.search
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.papyrus.data.BookItem
-import com.example.papyrus.data.GoogleBooksService
+import com.example.papyrus.data.GoogleBooksSearch.BookItem
+import com.example.papyrus.data.GoogleBooksSearch.GoogleBooksService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
     //id("com.android.application")           // <-- Existing, keep (standard for Android apps)
     //id("org.jetbrains.kotlin.android")      // <-- Existing, keep (lets you write Kotlin code)
 }
@@ -36,6 +37,8 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+        languageVersion = "1.9"
+        apiVersion = "1.9"
     }
     buildFeatures {
         compose = true
@@ -72,7 +75,9 @@ dependencies {
     // Coroutines (if not included already)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
-
+    implementation("androidx.room:room-runtime:2.5.2")
+    implementation("androidx.room:room-ktx:2.5.2")
+    kapt("androidx.room:room-compiler:2.5.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -1,4 +1,4 @@
-package com.example.papyrus.data
+package com.example.papyrus.data.GoogleBooksSearch
 
 data class GoogleBooksResponse(
     val items: List<BookItem>? = null
